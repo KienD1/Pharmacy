@@ -138,14 +138,12 @@ const ProductList = () => {
                 <div className="alert alert-warning mt-3">Không có kết quả</div>
             )}
 
-            {/* Popup modal for adding a new product */}
             <Modal show={showModal} onHide={handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title>Thêm Mới Sản Phẩm</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <Form onSubmit={handleSubmit}>
-                        {/* Các trường nhập liệu cho sản phẩm mới */}
                         <Form.Group controlId="formMaSanPham">
                             <Form.Label>Mã Sản Phẩm</Form.Label>
                             <Form.Control type="text" name="maSanPham" value={newProduct.maSanPham} onChange={handleChange} required />
